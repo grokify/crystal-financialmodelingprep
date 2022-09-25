@@ -1,0 +1,17 @@
+.gitignore
+.openapi-generator-ignore
+.travis.yml
+README.md
+git_push.sh
+shard.yml
+spec/api/financial_statements_api_spec.cr
+spec/models/income_statement_list_response_spec.cr
+spec/models/income_statement_spec.cr
+spec/spec_helper.cr
+src/null.cr
+src/null/api/financial_statements_api.cr
+src/null/api_client.cr
+src/null/api_error.cr
+src/null/configuration.cr
+src/null/models/income_statement.cr
+src/null/models/income_statement_list_response.cr
