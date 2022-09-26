@@ -21,7 +21,7 @@ module Financialmodelingprep
     # Get Income Statements
     # Retreive income statements for stocks by symbol or CIK.
     # @param symbol [String]
-    # @return [IncomeStatementListResponse]
+    # @return [Array(IncomeStatement)]
     def get_income_statements(symbol : String, limit : Int32?, period : String?, apikey : String?, datatype : String?)
       data, _status_code, _headers = get_income_statements_with_http_info(symbol, limit, period, apikey, datatype)
       data
@@ -30,7 +30,7 @@ module Financialmodelingprep
     # Get Income Statements
     # Retreive income statements for stocks by symbol or CIK.
     # @param symbol [String]
-    # @return [Array<(IncomeStatementListResponse, Integer, Hash)>] IncomeStatementListResponse data, response status code and response headers
+    # @return [Array<(Array(IncomeStatement), Integer, Hash)>] Array(IncomeStatement) data, response status code and response headers
     def get_income_statements_with_http_info(symbol : String, limit : Int32?, period : String?, apikey : String?, datatype : String?)
       if @api_client.config.debugging
         Log.debug { "Calling API: FinancialStatementsApi.get_income_statements ..." }
@@ -65,7 +65,7 @@ module Financialmodelingprep
       post_body = nil
 
       # return_type
-      return_type = "IncomeStatementListResponse"
+      return_type = "Array(IncomeStatement)"
 
       # auth_names
       auth_names = [] of String
@@ -82,7 +82,7 @@ module Financialmodelingprep
       if @api_client.config.debugging
         Log.debug { "API called: FinancialStatementsApi#get_income_statements\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}" }
       end
-      return IncomeStatementListResponse.from_json(data), status_code, headers
+      return Array(IncomeStatement).from_json(data), status_code, headers
     end
   end
 end

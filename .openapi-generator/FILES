@@ -5,7 +5,6 @@ README.md
 git_push.sh
 shard.yml
 spec/api/financial_statements_api_spec.cr
-spec/models/income_statement_list_response_spec.cr
 spec/models/income_statement_spec.cr
 spec/spec_helper.cr
 src/financialmodelingprep.cr
@@ -14,4 +13,3 @@ src/financialmodelingprep/api_client.cr
 src/financialmodelingprep/api_error.cr
 src/financialmodelingprep/configuration.cr
 src/financialmodelingprep/models/income_statement.cr
-src/financialmodelingprep/models/income_statement_list_response.cr

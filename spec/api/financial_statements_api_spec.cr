@@ -32,7 +32,7 @@ describe "FinancialStatementsApi" do
   # @option opts [String] :period Specify a quarterly income statement. Default is annual.
   # @option opts [String] :apikey API key for authn / authz
   # @option opts [String] :datatype Format of data to return
-  # @return [IncomeStatementListResponse]
+  # @return [Array(IncomeStatement)]
   describe "get_income_statements test" do
     it "should work" do
       # assertion here. ref: https://crystal-lang.org/reference/guides/testing.html
