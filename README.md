@@ -1,4 +1,4 @@
-# financialmodelingprep
+# Financial Modeling Prep SDK for Crystal
 
 The Crystal module for the Financial Modeling Prep API
 
@@ -19,7 +19,7 @@ Add the following to shard.yaml
 ```yaml
 dependencies:
   financialmodelingprep:
-    github: GIT_USER_ID/GIT_REPO_ID
+    github: grokify/financialmodelingprep
     version: ~> 0.1.0
 ```
 
