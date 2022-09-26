@@ -32,8 +32,8 @@ module Financialmodelingprep
     @[JSON::Field(key: "costOfRevenue", type: Float64?, nillable: true, emit_null: false)]
     property cost_of_revenue : Float64?
 
-    @[JSON::Field(key: "date", type: Time?, nillable: true, emit_null: false)]
-    property date : Time?
+    @[JSON::Field(key: "date", type: String?, nillable: true, emit_null: false)]
+    property date : String?
 
     @[JSON::Field(key: "depreciationAndAmortization", type: Float64?, nillable: true, emit_null: false)]
     property depreciation_and_amortization : Float64?
@@ -50,8 +50,8 @@ module Financialmodelingprep
     @[JSON::Field(key: "epsdiluted", type: Float64?, nillable: true, emit_null: false)]
     property epsdiluted : Float64?
 
-    @[JSON::Field(key: "fillingDate", type: Time?, nillable: true, emit_null: false)]
-    property filling_date : Time?
+    @[JSON::Field(key: "fillingDate", type: String?, nillable: true, emit_null: false)]
+    property filling_date : String?
 
     @[JSON::Field(key: "finalLink", type: String?, nillable: true, emit_null: false)]
     property final_link : String?
@@ -136,7 +136,7 @@ module Financialmodelingprep
 
     # Initializes the object
     # @param [Hash] attributes Model attributes in the form of hash
-    def initialize(@accepted_date : String?, @calendar_year : String?, @cik : String?, @cost_and_expenses : Float64?, @cost_of_revenue : Float64?, @date : Time?, @depreciation_and_amortization : Float64?, @ebitda : Float64?, @ebitdaratio : Float64?, @eps : Float64?, @epsdiluted : Float64?, @filling_date : Time?, @final_link : String?, @general_and_administrative_expenses : Float64?, @gross_profit : Float64?, @gross_profit_ratio : Float64?, @income_before_tax : Float64?, @income_before_tax_ratio : Float64?, @income_tax_expense : Float64?, @interest_expense : Float64?, @interest_income : Float64?, @interestincome : Float64?, @link : String?, @net_income : Float64?, @net_income_ratio : Float64?, @operating_expenses : Float64?, @operating_income : Float64?, @operating_income_ratio : Float64?, @other_expenses : Float64?, @period : String?, @reported_currency : String?, @research_and_development_expenses : Float64?, @revenue : Float64?, @selling_and_marketing_expenses : Float64?, @selling_general_and_administrative_expenses : Float64?, @symbol : String?, @total_other_income_expenses_net : Float64?, @weighted_average_shs_out : Float64?, @weighted_average_shs_out_dil : Float64?)
+    def initialize(@accepted_date : String?, @calendar_year : String?, @cik : String?, @cost_and_expenses : Float64?, @cost_of_revenue : Float64?, @date : String?, @depreciation_and_amortization : Float64?, @ebitda : Float64?, @ebitdaratio : Float64?, @eps : Float64?, @epsdiluted : Float64?, @filling_date : String?, @final_link : String?, @general_and_administrative_expenses : Float64?, @gross_profit : Float64?, @gross_profit_ratio : Float64?, @income_before_tax : Float64?, @income_before_tax_ratio : Float64?, @income_tax_expense : Float64?, @interest_expense : Float64?, @interest_income : Float64?, @interestincome : Float64?, @link : String?, @net_income : Float64?, @net_income_ratio : Float64?, @operating_expenses : Float64?, @operating_income : Float64?, @operating_income_ratio : Float64?, @other_expenses : Float64?, @period : String?, @reported_currency : String?, @research_and_development_expenses : Float64?, @revenue : Float64?, @selling_and_marketing_expenses : Float64?, @selling_general_and_administrative_expenses : Float64?, @symbol : String?, @total_other_income_expenses_net : Float64?, @weighted_average_shs_out : Float64?, @weighted_average_shs_out_dil : Float64?)
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
