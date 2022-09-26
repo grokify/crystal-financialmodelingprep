@@ -39,7 +39,7 @@ module Financialmodelingprep
       if @api_client.config.client_side_validation && symbol.nil?
         raise ArgumentError.new("Missing the required parameter 'symbol' when calling FinancialStatementsApi.get_income_statements")
       end
-      allowable_values = ["quarter"]
+      allowable_values = ["annual", "quarter"]
       if @api_client.config.client_side_validation && period && !allowable_values.includes?(period)
         raise ArgumentError.new("invalid value for \"period\", must be one of #{allowable_values}")
       end
