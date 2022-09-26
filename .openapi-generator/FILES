@@ -8,10 +8,10 @@ spec/api/financial_statements_api_spec.cr
 spec/models/income_statement_list_response_spec.cr
 spec/models/income_statement_spec.cr
 spec/spec_helper.cr
-src/null.cr
-src/null/api/financial_statements_api.cr
-src/null/api_client.cr
-src/null/api_error.cr
-src/null/configuration.cr
-src/null/models/income_statement.cr
-src/null/models/income_statement_list_response.cr
+src/financialmodelingprep.cr
+src/financialmodelingprep/api/financial_statements_api.cr
+src/financialmodelingprep/api_client.cr
+src/financialmodelingprep/api_error.cr
+src/financialmodelingprep/configuration.cr
+src/financialmodelingprep/models/income_statement.cr
+src/financialmodelingprep/models/income_statement_list_response.cr

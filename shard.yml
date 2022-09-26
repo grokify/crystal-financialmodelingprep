@@ -1,9 +1,9 @@
-name: 
-version: 1.0.0
+name: financialmodelingprep
+version: 0.1.0
 authors:
-  - 
+  - grokify
 description: |
-  - 
+  - Financial Modeling Prep V3 API Client
 crystal: ">= 0.35.1"
 dependencies:
   crest:
@@ -17,4 +17,4 @@ development_dependencies:
   ameba:
     github: crystal-ameba/ameba
 
-license: 
+license: MIT

@@ -10,7 +10,7 @@
 
 require "log"
 
-module 
+module FinancialModelingPrep
   class Configuration
     # Defines url scheme
     property scheme : String
