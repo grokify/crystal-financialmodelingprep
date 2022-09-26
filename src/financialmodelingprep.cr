@@ -12,8 +12,8 @@
 require "crest"
 require "log"
 
-module FinancialModelingPrep
-  Log = ::Log.for("FinancialModelingPrep") # => Log for FinancialModelingPrep source
+module Financialmodelingprep
+  Log = ::Log.for("Financialmodelingprep") # => Log for Financialmodelingprep source
 
   VERSION = {{ `shards version #{__DIR__}`.chomp.stringify }}
 
@@ -25,7 +25,7 @@ module FinancialModelingPrep
   # Customize default settings for the SDK using block.
   #
   # ```
-  # FinancialModelingPrep.configure do |config|
+  # Financialmodelingprep.configure do |config|
   #   config.username = "xxx"
   #   config.password = "xxx"
   # end

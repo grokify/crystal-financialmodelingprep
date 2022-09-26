@@ -11,7 +11,7 @@
 require "json"
 require "time"
 
-module FinancialModelingPrep
+module Financialmodelingprep
   # Income Statement
   class IncomeStatement
     include JSON::Serializable
@@ -277,7 +277,7 @@ module FinancialModelingPrep
         end
       else # model
         # models (e.g. Pet) or oneOf
-        klass = FinancialModelingPrep.const_get(type)
+        klass = Financialmodelingprep.const_get(type)
         klass.respond_to?(:openapi_one_of) ? klass.build(value) : klass.build_from_hash(value)
       end
     end

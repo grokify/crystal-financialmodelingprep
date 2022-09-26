@@ -8,7 +8,7 @@
 # OpenAPI Generator version: 6.2.0
 #
 
-module FinancialModelingPrep
+module Financialmodelingprep
   class ApiError < Exception
     getter code : Int32?
     getter response_headers : Hash(String, Array(String) | String)?

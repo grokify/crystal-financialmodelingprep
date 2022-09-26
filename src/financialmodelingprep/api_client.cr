@@ -11,7 +11,7 @@
 require "json"
 require "time"
 
-module FinancialModelingPrep
+module Financialmodelingprep
   class ApiClient
     # The Configuration object holding settings to be used in the API client.
     property config : Configuration

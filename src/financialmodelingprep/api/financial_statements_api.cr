@@ -10,7 +10,7 @@
 
 require "uri"
 
-module FinancialModelingPrep
+module Financialmodelingprep
   class FinancialStatementsApi
     property api_client : ApiClient
 
