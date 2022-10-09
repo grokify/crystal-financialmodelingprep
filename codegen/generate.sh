@@ -1,0 +1,1 @@
+java -jar openapi-generator-cli.jar generate -i openapi-spec_v3.json -g crystal -o financialmodelingprep --additional-properties=shardName=financialmodelingprep,moduleName=Financialmodelingprep,shardLicense=MIT,shardVersion=0.1.4,shardAuthors=grokify,shardDescription=Financial\ Modeling\ Prep\ V3\ API\ Client
