@@ -23,6 +23,29 @@ dependencies:
     version: ~> 0.1.4
 ```
 
+## Usage
+
+```crystal
+require "financialmodelingprep"
+
+api = Financialmodelingprep::FinancialStatementsApi.new
+
+infos, status, headers = api.get_income_statements_with_http_info(
+  symbol: "AAPL",
+  apikey: "fmp_api_key",
+  datatype: "json",
+  limit: 1,
+  period: "annual")
+
+puts status
+
+infos.each { |info|
+  puts info.to_json
+}
+```
+
+More at: [github.com/grokify/crystal-financialmodelingprep-example](https://github.com/grokify/crystal-financialmodelingprep-example)
+
 ## Development
 
 Install dependencies
