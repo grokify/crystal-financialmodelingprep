@@ -67,7 +67,7 @@ module Financialmodelingprep
       return_type = "Array(IncomeStatement)"
 
       # auth_names
-      auth_names = [] of String
+      auth_names = ["ApiKeyAuth"]
 
       data, status_code, headers = @api_client.call_api(:GET,
         local_var_path,

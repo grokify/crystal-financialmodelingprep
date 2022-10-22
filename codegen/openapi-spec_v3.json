@@ -26,7 +26,92 @@
 			]
 		}
 	],
+	"security": [
+		{
+			"ApiKeyAuth": []
+		}
+	],
+	"paths": {
+		"/income-statement/{symbol}": {
+			"parameters": [
+				{
+					"schema": {
+						"type": "string"
+					},
+					"name": "symbol",
+					"in": "path",
+					"required": true
+				}
+			],
+			"get": {
+				"summary": "Get Income Statements",
+				"description": "Retreive income statements for stocks by symbol or CIK.",
+				"tags": [
+					"Financial Statements"
+				],
+				"security": [
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/IncomeStatement"
+									}
+								}
+							}
+						}
+					}
+				},
+				"operationId": "getIncomeStatements",
+				"parameters": [
+					{
+						"schema": {
+							"type": "integer"
+						},
+						"in": "query",
+						"name": "limit",
+						"description": "Number of results to return."
+					},
+					{
+						"schema": {
+							"type": "string",
+							"enum": [
+								"annual",
+								"quarter"
+							]
+						},
+						"in": "query",
+						"name": "period",
+						"description": "Specify a quarterly income statement. Default is annual."
+					},
+					{
+						"schema": {
+							"type": "string"
+						},
+						"in": "query",
+						"name": "datatype",
+						"description": "Format of data to return"
+					}
+				]
+			}
+		}
+	},
 	"components": {
+		"securitySchemes": {
+			"ApiKeyAuth": {
+				"type": "apiKey",
+				"in": "header",
+				"name": "apikey",
+				"description": "API key for authn / authz"
+			}
+		},
 		"schemas": {
 			"IncomeStatement": {
 				"type": "object",
@@ -195,78 +280,6 @@
 						"type": "number"
 					}
 				}
-			}
-		}
-	},
-	"security": [
-		{
-			"ApiKeyAuth": []
-		}
-	],
-	"paths": {
-		"/income-statement/{symbol}": {
-			"parameters": [
-				{
-					"schema": {
-						"type": "string"
-					},
-					"name": "symbol",
-					"in": "path",
-					"required": true
-				}
-			],
-			"get": {
-				"summary": "Get Income Statements",
-				"description": "Retreive income statements for stocks by symbol or CIK.",
-				"tags": [
-					"Financial Statements"
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "array",
-									"items": {
-										"$ref": "#/components/schemas/IncomeStatement"
-									}
-								}
-							}
-						}
-					}
-				},
-				"operationId": "getIncomeStatements",
-				"parameters": [
-					{
-						"schema": {
-							"type": "integer"
-						},
-						"in": "query",
-						"name": "limit",
-						"description": "Number of results to return."
-					},
-					{
-						"schema": {
-							"type": "string",
-							"enum": [
-								"annual",
-								"quarter"
-							]
-						},
-						"in": "query",
-						"name": "period",
-						"description": "Specify a quarterly income statement. Default is annual."
-					},
-					{
-						"schema": {
-							"type": "string"
-						},
-						"in": "query",
-						"name": "datatype",
-						"description": "Format of data to return"
-					}
-				]
 			}
 		}
 	}
