@@ -220,7 +220,7 @@ module Financialmodelingprep
       Hash{
         "ApiKeyAuth" => {
           type:  "api_key",
-          in:    "header",
+          in:    "query",
           key:   "apikey",
           value: api_key_with_prefix(:apikey),
         },

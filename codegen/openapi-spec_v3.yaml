@@ -61,7 +61,7 @@ components:
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
-      in: header
+      in: query
       name: apikey
       description: API key for authn / authz
   schemas:

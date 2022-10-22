@@ -49,11 +49,6 @@
 				"tags": [
 					"Financial Statements"
 				],
-				"security": [
-					{
-						"ApiKeyAuth": []
-					}
-				],
 				"responses": {
 					"200": {
 						"description": "OK",
@@ -107,7 +102,7 @@
 		"securitySchemes": {
 			"ApiKeyAuth": {
 				"type": "apiKey",
-				"in": "header",
+				"in": "query",
 				"name": "apikey",
 				"description": "API key for authn / authz"
 			}
